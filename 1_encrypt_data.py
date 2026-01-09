@@ -19,6 +19,8 @@ ACCESS_POLICY = {
 
 def encrypt_files():
     print("--- Begin Encrypts File ---")
+    
+    os.makedirs(OUTPUT, exist_ok=True)
 
     # Loop a lists in ACCESS_POLICY
     for filename, required_roles in ACCESS_POLICY.items():
